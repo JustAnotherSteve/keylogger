@@ -1,0 +1,23 @@
+Methodology:
+	1. download file
+	2. run the file
+		2.1 Creates 2 processes - the install and the keylogger the 
+			logger: sudo showkey > logger.txt
+			install: basic script i wrote before to make it look like its installing.
+
+
+
+logger:
+	1. copy itself to many places in the computer
+	2. run the keylogger
+	3. at certain points, it will send the logger somewhere with a begin log time and an end log time. Clears the log file and starts again.
+
+install:
+	1. just looks like an install job
+
+decoder: on my computer - decodes the 
+	1. 
+
+
+
+

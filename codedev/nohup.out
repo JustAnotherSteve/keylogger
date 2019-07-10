@@ -1,0 +1,7 @@
+showkey: tcgetattr: Inappropriate ioctl for device
+showkey: tcgetattr: Inappropriate ioctl for device
+showkey: tcgetattr: Inappropriate ioctl for device
+showkey: tcsetattr: Inappropriate ioctl for device
+
+Press any keys - Ctrl-D will terminate this program
+

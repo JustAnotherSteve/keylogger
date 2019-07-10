@@ -1,0 +1,63 @@
+kb mode was ?UNKNOWN?
+[ if you are trying this under X, it might not work
+since the X server is also reading /dev/console ]
+
+press any key (program terminates 10s after last keypress)...
+keycode  28 release
+keycode  20 press
+keycode  20 release
+keycode  35 press
+keycode  35 release
+keycode  23 press
+keycode  23 release
+keycode  31 press
+keycode  31 release
+keycode  57 press
+keycode  57 release
+keycode  23 press
+keycode  23 release
+keycode  31 press
+keycode  31 release
+keycode  57 press
+keycode  57 release
+keycode  20 press
+keycode  20 release
+keycode  35 press
+keycode  18 press
+keycode  35 release
+keycode  18 release
+keycode  57 press
+keycode  57 release
+keycode 104 press
+keycode 104 release
+keycode 107 press
+keycode 107 release
+keycode  20 press
+keycode  20 release
+keycode  35 press
+keycode  35 release
+keycode  31 press
+keycode  30 press
+keycode  31 release
+keycode  33 press
+keycode  30 release
+keycode  37 press
+keycode  31 press
+keycode  33 release
+keycode  37 release
+keycode  31 release
+keycode  46 press
+keycode  57 press
+keycode  46 release
+keycode  57 release
+keycode  28 press
+keycode  28 release
+keycode  29 press
+keycode  29 press
+keycode  29 press
+keycode  29 press
+keycode  32 press
+keycode  32 release
+keycode  29 release
+keycode  29 press
+caught signal 20, cleaning up...
