@@ -1,4 +1,4 @@
-
+# converts from the fucked up showkey output to readable text
 
 f=open("words.txt")
 text = f.read()
