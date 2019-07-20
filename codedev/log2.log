@@ -1,0 +1,168 @@
+Traceback (most recent call last):
+  File "/home/jonesy/keylogger/codedev/log2.py", line 3, in <module>
+    from pynput.keyboard import Key, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/__init__.py", line 40, in <module>
+    from . import keyboard
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/__init__.py", line 49, in <module>
+    from ._xorg import KeyCode, Key, Controller, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/_xorg.py", line 39, in <module>
+    from pynput._util.xorg import (
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 40, in <module>
+    _check()
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 38, in _check
+    display = Xlib.display.Display()
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 89, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 71, in __init__
+    protocol_display.Display.__init__(self, *args, **keys)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/protocol/display.py", line 84, in __init__
+    name, protocol, host, displayno, screenno = connect.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/connect.py", line 73, in get_display
+    return mod.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/unix_connect.py", line 76, in get_display
+    raise error.DisplayNameError(display)
+Xlib.error.DisplayNameError: Bad display name ""
+Traceback (most recent call last):
+  File "/home/jonesy/keylogger/codedev/log2.py", line 3, in <module>
+    from pynput.keyboard import Key, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/__init__.py", line 40, in <module>
+    from . import keyboard
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/__init__.py", line 49, in <module>
+    from ._xorg import KeyCode, Key, Controller, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/_xorg.py", line 39, in <module>
+    from pynput._util.xorg import (
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 40, in <module>
+    _check()
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 38, in _check
+    display = Xlib.display.Display()
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 89, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 71, in __init__
+    protocol_display.Display.__init__(self, *args, **keys)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/protocol/display.py", line 84, in __init__
+    name, protocol, host, displayno, screenno = connect.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/connect.py", line 73, in get_display
+    return mod.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/unix_connect.py", line 76, in get_display
+    raise error.DisplayNameError(display)
+Xlib.error.DisplayNameError: Bad display name ""
+Traceback (most recent call last):
+  File "/home/jonesy/keylogger/codedev/log2.py", line 3, in <module>
+    from pynput.keyboard import Key, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/__init__.py", line 40, in <module>
+    from . import keyboard
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/__init__.py", line 49, in <module>
+    from ._xorg import KeyCode, Key, Controller, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/_xorg.py", line 39, in <module>
+    from pynput._util.xorg import (
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 40, in <module>
+    _check()
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 38, in _check
+    display = Xlib.display.Display()
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 89, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 71, in __init__
+    protocol_display.Display.__init__(self, *args, **keys)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/protocol/display.py", line 84, in __init__
+    name, protocol, host, displayno, screenno = connect.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/connect.py", line 73, in get_display
+    return mod.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/unix_connect.py", line 76, in get_display
+    raise error.DisplayNameError(display)
+Xlib.error.DisplayNameError: Bad display name ""
+Traceback (most recent call last):
+  File "/home/jonesy/keylogger/codedev/log2.py", line 3, in <module>
+    from pynput.keyboard import Key, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/__init__.py", line 40, in <module>
+    from . import keyboard
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/__init__.py", line 49, in <module>
+    from ._xorg import KeyCode, Key, Controller, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/_xorg.py", line 39, in <module>
+    from pynput._util.xorg import (
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 40, in <module>
+    _check()
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 38, in _check
+    display = Xlib.display.Display()
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 89, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 71, in __init__
+    protocol_display.Display.__init__(self, *args, **keys)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/protocol/display.py", line 84, in __init__
+    name, protocol, host, displayno, screenno = connect.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/connect.py", line 73, in get_display
+    return mod.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/unix_connect.py", line 76, in get_display
+    raise error.DisplayNameError(display)
+Xlib.error.DisplayNameError: Bad display name ""
+Traceback (most recent call last):
+  File "/home/jonesy/keylogger/codedev/log2.py", line 3, in <module>
+    from pynput.keyboard import Key, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/__init__.py", line 40, in <module>
+    from . import keyboard
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/__init__.py", line 49, in <module>
+    from ._xorg import KeyCode, Key, Controller, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/_xorg.py", line 39, in <module>
+    from pynput._util.xorg import (
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 40, in <module>
+    _check()
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 38, in _check
+    display = Xlib.display.Display()
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 89, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 71, in __init__
+    protocol_display.Display.__init__(self, *args, **keys)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/protocol/display.py", line 84, in __init__
+    name, protocol, host, displayno, screenno = connect.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/connect.py", line 73, in get_display
+    return mod.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/unix_connect.py", line 76, in get_display
+    raise error.DisplayNameError(display)
+Xlib.error.DisplayNameError: Bad display name ""
+Traceback (most recent call last):
+  File "/home/jonesy/keylogger/codedev/log2.py", line 3, in <module>
+    from pynput.keyboard import Key, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/__init__.py", line 40, in <module>
+    from . import keyboard
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/__init__.py", line 49, in <module>
+    from ._xorg import KeyCode, Key, Controller, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/_xorg.py", line 39, in <module>
+    from pynput._util.xorg import (
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 40, in <module>
+    _check()
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 38, in _check
+    display = Xlib.display.Display()
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 89, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 71, in __init__
+    protocol_display.Display.__init__(self, *args, **keys)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/protocol/display.py", line 84, in __init__
+    name, protocol, host, displayno, screenno = connect.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/connect.py", line 73, in get_display
+    return mod.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/unix_connect.py", line 76, in get_display
+    raise error.DisplayNameError(display)
+Xlib.error.DisplayNameError: Bad display name ""
+Traceback (most recent call last):
+  File "/home/jonesy/keylogger/codedev/log2.py", line 3, in <module>
+    from pynput.keyboard import Key, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/__init__.py", line 40, in <module>
+    from . import keyboard
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/__init__.py", line 49, in <module>
+    from ._xorg import KeyCode, Key, Controller, Listener
+  File "/usr/local/lib/python3.6/dist-packages/pynput/keyboard/_xorg.py", line 39, in <module>
+    from pynput._util.xorg import (
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 40, in <module>
+    _check()
+  File "/usr/local/lib/python3.6/dist-packages/pynput/_util/xorg.py", line 38, in _check
+    display = Xlib.display.Display()
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 89, in __init__
+    self.display = _BaseDisplay(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/display.py", line 71, in __init__
+    protocol_display.Display.__init__(self, *args, **keys)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/protocol/display.py", line 84, in __init__
+    name, protocol, host, displayno, screenno = connect.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/connect.py", line 73, in get_display
+    return mod.get_display(display)
+  File "/home/jonesy/.local/lib/python3.6/site-packages/Xlib/support/unix_connect.py", line 76, in get_display
+    raise error.DisplayNameError(display)
+Xlib.error.DisplayNameError: Bad display name ""
