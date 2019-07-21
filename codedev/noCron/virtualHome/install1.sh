@@ -1,11 +1,10 @@
-#start
-
-# # finds shell files
-# find /home -name "*.sh"
-
-# # copies self
-# touch fileData.txt
-# gets a random folder on the computer
+# the start
+# just some boring shell file
+echo "lets do this"
+echo "and do that"
+touch aNewFile.txt
+rm aNewFile.txt
+# the end# gets a random folder on the computer
 declare TARGETDIR
 getRandDir(){
 	DIRNUM=$(find ~ -type d | wc -l)
